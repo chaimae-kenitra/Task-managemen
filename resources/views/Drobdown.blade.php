@@ -75,12 +75,7 @@
         newRow.innerHTML = `
             <td><input type="text" name="projectname"></td>
             <td><input type="text" name="todo"></td>
-            <td><select class="browser-default custom-select" name="employee" id="employee">
-                @foreach ($emp as $employee)
-                    <option value="{{ $employee->name }}">{{ $employee->name }}</option>
-                 @endforeach
-                  
-             </select></td>
+            <td><input type="text" name="employee"></td>
             <td><input type="text" name="type"></td>
             <td><input type="text" name="status"></td>
             <td><input type="date" name="deadline"></td>
@@ -96,7 +91,6 @@
             const projectname = newRow.querySelector('[name=projectname]').value;
             const todo = newRow.querySelector('[name=todo]').value;
             const employee = newRow.querySelector('[name=employee]').value;
-    
             const type = newRow.querySelector('[name=type]').value;
             const status = newRow.querySelector('[name=status]').value;
             const deadline = newRow.querySelector('[name=deadline]').value;

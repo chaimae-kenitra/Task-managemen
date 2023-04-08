@@ -17,5 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('tasks.index');
+Route::get('employees/{id}', [App\Http\Controllers\AdminController::class, 'getEmployees'])->name('employees.getEmployees');
 Route::delete('/tasks/{id}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('tasks.destroy');
 Route::post('/admin', [App\Http\Controllers\AdminController::class, 'store'])->name('tasks.store');
+
+
