@@ -27,4 +27,5 @@ class EmployeeTask extends Model
     {
         return $this->belongsTo(Task::class);
     }
+   
 }

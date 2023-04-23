@@ -17,9 +17,9 @@ return new class extends Migration
             $table->unsignedBigInteger('task_id');
             $table->dateTime('assigned_date');
             $table->timestamps();
-        
             $table->foreign('employee_id')->references('id')->on('employees');
             $table->foreign('task_id')->references('id')->on('tasks');
+          
         });
         
     }
